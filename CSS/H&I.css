@@ -1,248 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif; 
-    line-height: 1.6;
-    color: #070707;
-    padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom right, #fff7f9, #ffe6e6);
+  color: #333;
+  padding: 1rem;
+  line-height: 1.6;
+  transition: all 0.3s ease-in-out;
+}
+
+h1, h2, h3 {
+  color: #6a1b9a;
+  text-align: center;
+  margin: 1.2rem 0;
 }
 
 a {
-    color: rgb(121, 0, 177);
-    text-decoration: none;
+  color: #b8005d;
+  text-decoration: none;
 }
 
 a:hover {
-    color: darkviolet;
+  text-decoration: underline;
 }
 
 nav.top-nav {
-    text-align: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6a1b9a;
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 1rem;
 }
 
-.hero h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 20px 0;
-    color: #070707;
+nav.top-nav a {
+  color: white;
+  font-weight: bold;
 }
 
-main {
-    background: rgba(253, 252, 252, 0.986);
-    padding: 20px;
-    border-radius: 10px;
+#toggle-dark-mode {
+  background: #b8005d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-section h2, section h3 {
-    text-align: center;
-    margin: 20px 0 10px;
-    color: #0f0f0f;
-}
-
-img {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(134, 83, 201);
-}
-
-p {
-    margin: 10px 0 20px;
-    font-size: 1.1rem;
-}
-
-
-.content-links {
-    background-color: rgb(255, 255, 255);
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-.link-group {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    
-}
-
-.link-group a {
-    background-color: #f8f5f8;
-    color: #000;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* Responsive css  */
-@media (max-width: 600px) {
-    .link-group {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    body {
-        padding: 10px;
-    }
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
-    color: gray;
-}
-
-
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-/* Navigation Styles */
-.top-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    z-index: 100;
-}
-
-.top-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin: 0 15px;
-}
-
-.top-nav.sticky {
-    position: fixed;
-    top: 0;
-    background-color: #333;
-    width: 100%;
-    box-shadow: 0 4px 2px -2px gray;
-}
-
-.top-nav a:hover {
-    color: #4CAF50;
-}
-
-/* Header Section */
 .hero {
-    background-color: #2C3E50;
-    color: white;
-    text-align: center;
-    padding: 50px 0;
+  background: #f3d1f4;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
 }
 
-.hero h1 {
-    font-size: 3em;
-    margin: 0;
+section {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border-radius: 15px;
+  background: #ffffffee;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* Section Styling */
-main {
-    padding: 20px;
-}
-
-h2, h3 {
-    color: #333;
-    font-size: 2em;
-    margin-top: 20px;
-}
-
-p {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/* Image Styling */
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 15px;
 }
 
-img:hover {
-    cursor: pointer;
-}
-
-/* Content Links */
 .content-links {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-
-.link-group {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .link-group a {
-    color: #333;
-    font-size: 1.1em;
-    text-decoration: none;
+  background: #6a1b9a;
+  color: white;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background 0.3s ease;
 }
 
 .link-group a:hover {
-    color: #4CAF50;
+  background: #b8005d;
 }
 
-/* Sticky Navigation and Back to Top Button */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
+.music-player audio {
+  width: 100%;
+  margin-top: 1rem;
 }
 
-.back-to-top:hover {
-    background-color: #4CAF50;
+.quiz-section {
+  text-align: center;
 }
 
-/* Fade In Elements */
-.fade-in {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
+#start-quiz {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
 }
 
-.fade-in.visible {
-    opacity: 1;
+#quiz-result {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #b8005d;
 }
 
-/* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 50px;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  color: #777;
+}
+
+/* DARK MODE */
+body.dark {
+  background: linear-gradient(to bottom right, #1e1e1e, #2a2a2a);
+  color: #f0f0f0;
+}
+
+body.dark section {
+  background: #2e2e2e;
+}
+
+body.dark a {
+  color: #ff66b2;
+}
+
+body.dark .link-group a {
+  background: #444;
+  color: #fff;
+}
+
+body.dark .link-group a:hover {
+  background: #777;
+}
+
+body.dark h1, body.dark h2, body.dark h3 {
+  color: #ffc1ff;
+}
+
+body.dark footer {
+  color: #aaa;
 }

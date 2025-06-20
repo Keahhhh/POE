@@ -84,3 +84,23 @@ const form = document.querySelector("form");
 if (form) {
     form.addEventListener("submit", validateForm);
 }
+// DARK MODE TOGGLE
+const toggleButton = document.getElementById('toggle-dark-mode');
+const body = document.body;
+
+// Check for saved preference
+if (localStorage.getItem('theme') === 'dark') {
+  body.classList.add('dark');
+}
+
+// Toggle dark mode on click
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  
+  // Save preference
+  if (body.classList.contains('dark')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});

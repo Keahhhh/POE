@@ -1,14 +1,36 @@
-document.getElementById("start-quiz").addEventListener("click", () => {
-    const answer = prompt("Pick a vibe: 🔥 Fierce / 🌿 Soulful / 👑 Regal / 🎤 Bold").toLowerCase();
-    let result = "";
-  
-    if (answer.includes("fierce")) result = "You're the Sasha Fierce era – confident and powerful!";
-    else if (answer.includes("soulful")) result = "You're the B'Day era – radiant and emotionally in tune.";
-    else if (answer.includes("regal")) result = "You're the Lemonade era – deeply introspective and bold.";
-    else if (answer.includes("bold")) result = "You're the Renaissance era – stylish, loud, and unapologetic.";
-    else result = "You're uniquely Beyoncé – unboxed and undefinable!";
-  
-    document.getElementById("quiz-result").textContent = result;
+document.addEventListener('DOMContentLoaded', () => {
+  // Animate fade-in
+  const elements = document.querySelectorAll('section');
+  elements.forEach((el, index) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    setTimeout(() => {
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    }, index * 150);
   });
 
-  
+  // Dark mode toggle
+  const toggleButton = document.getElementById('toggle-dark-mode');
+  const body = document.body;
+
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+  });
+
+  // Quiz logic
+  const quizButton = document.getElementById('start-quiz');
+  const resultText = document.getElementById('quiz-result');
+
+  quizButton.addEventListener('click', () => {
+    const eras = ['Renaissance', 'Lemonade', 'Dangerously in Love', '4', 'B’Day'];
+    const randomEra = eras[Math.floor(Math.random() * eras.length)];
+    resultText.textContent = `You're in your "${randomEra}" era!`;
+  });
+});

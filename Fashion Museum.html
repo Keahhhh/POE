@@ -1,88 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iconic Outfits of All Time</title>
-    <link rel="stylesheet" href="CSS/FM.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iconic Outfits of All Time</title>
+  <link rel="stylesheet" href="CSS/FM.css" />
 </head>
 <body>
 
-    <h1>Iconic Outfits of All Time</h1>
+  <!-- Dark Mode Toggle Button -->
+  <button id="toggle-dark-mode">🌙</button>
 
-    <p>
-        Throughout her many tours, red carpets, and music videos, The Hive Queen has delivered jaw-dropping fashion moments. Iconic looks include:
-    </p>
+  <h1>Iconic Outfits of All Time</h1>
 
-    <ul>
-        <li>Crazy in Love music video</li>
-        <li>RWT (Renaissance World Tour) fashions</li>
-        <li>Lemonade album era</li>
-        <li>4 album era, and more</li>
-    </ul>
+  <p>
+    Throughout her many tours, red carpets, and music videos, The Hive Queen has delivered jaw-dropping fashion moments. Iconic looks include:
+  </p>
 
-    <h2>Lemonade & Beychella Era</h2>
+  <ul>
+    <li>Crazy in Love music video</li>
+    <li>RWT (Renaissance World Tour) fashions</li>
+    <li>Lemonade album era</li>
+    <li>4 album era, and more</li>
+  </ul>
 
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button class="filter-btn" data-era="all">Show All</button>
+    <button class="filter-btn" data-era="lemonade">Lemonade & Beychella</button>
+    <button class="filter-btn" data-era="dubai">Dubai</button>
+    <button class="filter-btn" data-era="renaissance">Renaissance Tour</button>
+  </div>
+
+  <!-- Outfits -->
+  <div class="outfit-card lemonade animate-on-scroll">
     <h3>1. Super Bowl</h3>
-    <img src="Superbowl.jfif" alt="Super Bowl outfit">
+    <img src="Superbowl.jfif" alt="Super Bowl outfit" />
+  </div>
 
+  <div class="outfit-card lemonade animate-on-scroll">
     <h3>2. Beychella</h3>
-    <img src="beychella.jpg" alt="Beychella outfit">
+    <img src="beychella.jpg" alt="Beychella outfit" />
+  </div>
 
+  <div class="outfit-card lemonade animate-on-scroll">
     <h3>3. Hold Up Music Video</h3>
-    <img src="lemonade.webp" alt="Lemonade music video outfit">
+    <img src="lemonade.webp" alt="Lemonade music video outfit" />
     <p>
-        The beautiful flowy yellow dress Beyoncé wore was designed by <strong>Roberto Cavalli</strong>.
+      The beautiful flowy yellow dress Beyoncé wore was designed by <strong>Roberto Cavalli</strong>.
     </p>
+  </div>
 
+  <div class="outfit-card lemonade animate-on-scroll">
     <h3>4. Grammy’s Performance</h3>
-    <img src="Grammys Performance.png" alt="Grammy's performance outfit">
+    <img src="Grammys Performance.png" alt="Grammy's performance outfit" />
+  </div>
 
+  <div class="outfit-card dubai animate-on-scroll">
     <h2>Dubai Performance</h2>
-    <img src="Dubai.webp" alt="Dubai performance outfit">
+    <img src="Dubai.webp" alt="Dubai performance outfit" />
+  </div>
 
+  <div class="outfit-card renaissance animate-on-scroll">
     <h2>Renaissance World Tour</h2>
-
     <h3>1. Valentino Cape Look</h3>
-    <img src="valentino.webp" alt="Valentino outfit">
+    <img src="valentino.webp" alt="Valentino outfit" />
+  </div>
 
+  <div class="outfit-card renaissance animate-on-scroll">
     <h3>2. Emilio Pucci Bodysuit</h3>
-    <img src="RWT-beyonce-pucci.webp" alt="Pucci outfit">
+    <img src="RWT-beyonce-pucci.webp" alt="Pucci outfit" />
+  </div>
 
+  <div class="outfit-card renaissance animate-on-scroll">
     <h3>3. Renaissance Variant 1</h3>
-    <img src="RWT varient 1.jpg" alt="Variant 1 outfit">
+    <img src="RWT varient 1.jpg" alt="Variant 1 outfit" />
+  </div>
 
+  <div class="outfit-card renaissance animate-on-scroll">
     <h3>4. Renaissance Variant 2</h3>
-    <img src="RWT varient 2.jpg" alt="Variant 2 outfit">
+    <img src="RWT varient 2.jpg" alt="Variant 2 outfit" />
+  </div>
 
+  <div class="outfit-card renaissance animate-on-scroll">
     <h3>5. Mugler Bodysuit</h3>
-    <img src="Mugler.webp" alt="Mugler outfit">
+    <img src="Mugler.webp" alt="Mugler outfit" />
+  </div>
 
-    <form>
-        <nav>
-            <h2><b>Content</b></h2>
-            <a href="History and Influences.html">History and Influences</a>
-            <a href="Her Musical Impact.html">Her Musical Impact</a>
-            <a href="Hair Impact.html">Hair Impact</a>
-            <a href="Website.html">Home Page</a>
-        </nav>
+  <!-- Navigation Links -->
+  <form>
+    <nav>
+      <h2><b>Content</b></h2>
+      <a href="History and Influences.html">History and Influences</a>
+      <a href="Her Musical Impact.html">Her Musical Impact</a>
+      <a href="Hair Impact.html">Hair Impact</a>
+      <a href="Website.html">Home Page</a>
+    </nav>
+  </form>
 
-    </form>
+  <!-- Continue Navigation -->
+  <em>Continue on to <a href="Her Musical Impact.html">Her Musical Impact</a>.</em>
 
-    <em>Continue on to <a href="Her Musical Impact.html">Her Musical Impact</a>.</em>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025, Keamogetse Magoleng</p>
+  </footer>
 
-    <footer>
-        <p>&copy; 2025, Keamogetse Magoleng</p>
-    </footer>
-<!-- Lightbox Modal -->
-<div id="lightbox" class="modal hidden">
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="modal hidden">
     <span id="lb-close" class="close">&times;</span>
     <span id="lb-prev" class="nav">&#10094;</span>
-    <img id="lb-img" src="" alt="">
+    <img id="lb-img" src="" alt="" />
     <span id="lb-next" class="nav">&#10095;</span>
   </div>
-  <script src="JavaScript/FM.js"></script>
-  
 
+  <!-- JS -->
+  <script src="JavaScript/FM.js"></script>
 </body>
 </html>
